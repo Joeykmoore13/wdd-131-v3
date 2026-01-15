@@ -9,7 +9,7 @@ function ChangeTheme() {
     if (current_theme == "dark")
     {
         logo.setAttribute('src', 'images/byui-logo-dark.png');
-        document.body.style.backgroundColor = "#000000";
+        document.body.style.backgroundColor = "#323131";
         document.body.style.border = '1px solid white';
         document.getElementById('core').classList.add('dark-text')
         document.getElementById('by').classList.add('dark-text')

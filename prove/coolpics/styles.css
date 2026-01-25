@@ -1,0 +1,90 @@
+header {
+    background-color: #2a81e2;
+}
+
+nav {
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+
+nav a {
+    /* margin: ; */
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    padding: 10px;
+}
+
+#heading {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+body {
+    background-color: #cccccc;
+    margin: 0;
+    text-align: center;
+}
+
+#images {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 15%;
+}
+
+#images div {
+    margin: 10px;
+    width: 70%;
+    text-align: center;
+    margin-top: 0;
+}
+
+img {
+    aspect-ratio: 1/1;
+    border: 3px solid white;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    object-fit: cover;
+}
+
+footer {
+
+    bottom: 0;
+    background-color: #2a81e2;
+    text-align: center;
+    width: 100%;
+    min-height: 30px;
+}
+
+@media screen and (min-width: 450px) {
+    #images {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 7%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #alt-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #images {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer {
+        position: fixed;
+    }
+}

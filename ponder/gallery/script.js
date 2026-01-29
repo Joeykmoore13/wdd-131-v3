@@ -8,9 +8,16 @@ const closeButton = modal.querySelector('.close-viewer');
 gallery.addEventListener('click', openModal);
 
 function openModal(e) {
-    
-// Code to show modal  - Use event parameter 'e'   
-    
+    console.log(e);
+    const image = e.target;
+    const src = image.getAttribute('src');
+    const alt = image.getAttribute('alt');
+
+    const full = src.replace('sm', 'full');
+
+    modalImage.src = full;
+    modalImage.alt = alt;
+    modal.showModal();
 }
 // Close modal on button click
 closeButton.addEventListener('click', () => {
@@ -23,4 +30,5 @@ modal.addEventListener('click', (event) => {
         modal.close();
     }
 });
+// Pressing the escape key will also close the modal. That is a default functionality
           

@@ -9,7 +9,8 @@ nav {
 }
 
 nav a {
-    /* margin: ; */
+    display: block;
+    margin: 7px auto;
 }
 
 header h1 {
@@ -52,6 +53,31 @@ img {
     object-fit: cover;
 }
 
+dialog img {
+    aspect-ratio: initial;
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+    object-fit: contain;
+}
+
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+#close-button {
+    position: absolute;
+    top: 15vh;
+    right: 3vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
 footer {
 
     bottom: 0;
@@ -68,6 +94,15 @@ footer {
         grid-template-columns: 1fr 1fr;
         margin-left: 7%;
     }
+
+    dialog img {
+        width: 70%;
+    }
+
+    #close-button {
+        top: 15%;
+        right: 10%;
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -83,6 +118,19 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin-bottom: 100px;
+    }
+
+    #close-button {
+        top: 15%;
+        right: 20%;
+    }
+
+    nav a {
+        margin: 0 auto;
+    }
+
+    dialog img {
+        width: 50%;
     }
 
     footer {

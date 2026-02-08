@@ -1,0 +1,12 @@
+width of cube : 55mm
+diagonal width of cube: ~77.7817 w = (sqrt(55^2 * 2))
+55 - w =~ 11.3908 ((w-55)/2)
+
+'A' corner vertex (when viewed from the top) moves along a unit circle with a diameter of the diagonal width of the cube
+Where is it's home position cordinates?:
+x = 55/2
+y = 55/2
+t = 45`
+y = w*sin(theta)
+x = w*cos(theta)
+

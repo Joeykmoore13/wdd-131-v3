@@ -1,0 +1,128 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+hr{
+    background-color:gold;
+    border: none;
+    height: 3px;
+}
+nav {
+    margin-bottom: 40px;
+}
+#nav-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 30%;
+    list-style: none;
+}
+#nav-list li{
+    font-size: .7em;
+    color: rgb(157, 0, 0);
+    margin-left: 10px;
+}
+.book{
+    display: grid;
+    grid-template-columns: 1fr 25%;
+    text-align: center; 
+}
+.book-info{
+    grid-column:2/3;
+    margin-right: 10px;
+}
+
+.book-description{
+    grid-column: 1/2;
+    margin-left: 10px;
+}
+.book h2{
+    font-size: 1em;
+    color: rgb(157, 0, 0);
+}
+.book img{
+    width: 50%;
+    margin: 5px;
+}
+.book p{
+    font-size: .7em;
+    text-align: left;
+}
+.book-info p{
+    text-align: right;
+}
+.vertical-line{
+    display: none;
+}
+
+footer{
+    margin-top:30px;
+}
+footer p{
+    text-align: center;
+    font-size: .8em;
+}
+
+
+@media (min-width: 600px) {
+    h1{
+        font-size: 2em;
+    }
+    nav{
+        font-size: 1.3em;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+    #nav-list{
+        grid-template-columns: 70% 10% 10% 10%;
+        margin: 0;
+        margin-right: 30px;
+    }
+    li{
+        text-align: right;
+    }
+    #divider{
+        display: none;
+    }
+    hr{
+        margin-bottom: 20px;
+    }
+    .book{
+    grid-template-columns: 25% 5% 1fr;
+    }
+    .book-description{
+        grid-column: 3/4;
+    }
+    .vertical-line{
+        display: block;
+        grid-column: 2/3;
+        width: 0;
+        border: 2px solid gold;
+    }
+    .book-info{
+        grid-column: 1/2;
+        font-size: 1.5em;
+        margin-right:20px;
+    }
+    .book-description{
+        text-align: left;
+    }
+    .book-description p{
+        font-size:1em;
+    }
+    .book-description img{
+        width: 25%;
+        margin-left: 200px;
+    }
+    .book h2{
+        font-size: 1.7em;
+    }
+    footer p{
+        font-size: 1.2em;
+    }
+}

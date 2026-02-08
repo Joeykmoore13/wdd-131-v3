@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" , rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Testing Cube Transforms</h1>
+    <div id="settings">
+        <p class="slider-text">X rotation: </p>
+        <div class="slider">
+            <input type="range" min="0" max="360" value="0" class="slider" id="x-slider">
+        </div>
+
+        <input type="number" name="x-text" max=360 min=0 id="x-text" class="angle-box" />
+
+        <p class="slider-text">Y rotation: </p>
+        <div class="slider">
+            <input type="range" min="0" max="360" value="0" class="slider" id="y-slider">
+        </div>
+
+        <input type="number" name="x-text" max=360 min=0 id="y-text" class="angle-box" />
+
+        <p class="slider-text">Z rotation: </p>
+        <div class="slider">
+            <input type="range" min="0" max="360" value="0" class="slider" id="z-slider">
+        </div>
+
+        <input type="number" name="x-text" max=360 min=0 id="z-text" class="angle-box" />
+    </div>
+
+    <div id="cube-area">
+        <div id="ABCD", class="sticker"></div>
+        <div id="CDUV", class="sticker"></div>
+        <div id="UVWX", class="sticker"></div>
+        <div id="ABWX", class="sticker"></div>
+        <div id="CBWV", class="sticker"></div>
+        <div id="ADUX", class="sticker"></div>
+    </div>
+</body>
+
+</html>

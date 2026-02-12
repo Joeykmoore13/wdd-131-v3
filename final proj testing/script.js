@@ -1,6 +1,25 @@
 const screen_size = document.documentElement.clientWidth;
 const cube_dimension = 100
 
+
+
+class Vertex{
+    constructor(x_init,y_init,z_init){
+        this.x_init = x_init
+        this.y_init = y_init
+        this.z_init = z_init
+        this.x
+        this.y
+        this.z
+        this.radius = Math.sqrt((this.x_init**2) + (this.y_init**2) + (this.z_init ** 2))
+    }
+    calculateVertexCordinates(x_degrees,y_degrees,z_degrees)
+    {
+        
+    }
+}
+
+
 // 300px 300px, 100px 300px, 100px 100px, 300px 100px
 let vertices = {};
 vertices['A'] = [0,0];

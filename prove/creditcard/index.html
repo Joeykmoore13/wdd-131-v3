@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" , rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <form id='checkout'>
+        <div id="credit-top">
+            <label id="total-label">TOTAL: $199</label>
+            <label id="credit-icon">💳</label>
+            <div id="card-number">
+                <label for="card-number-input">CARD NUMBER</label>
+                <input id="card-number-input" type="text" pattern="[0-9]{16}" placeholder="1234 5678 9101 1020" name="card_number" aria-labelledby="card-number" required>
+            </div>
+            <div id="card-holder">
+                <label for="card-holder-input">CARD HOLDER</label>
+                <input id="card-holder-input" type="text" name="name" placeholder="Jane Doe" aria-labelledby="card-holder" required>
+            </div>
+            <div id="expiration">
+                <label for="expirationDate">EXPIRATION</label>
+                <div>
+                    <input id="expiration-month" type="text" name="expiration_month" placeholder="MM" aria-labelledby="expiration" required>
+                    <input id="expiration-year" type="text" name="expiration_year" placeholder="YY" aria-labelledby="expiration" required>
+                </div>
+            </div>
+        </div>
+        <div id="credit-bottom">
+            <div id="black-bar"></div>
+            <div id="cvc">
+                <label for="cvc-input">CVC/CVV</label>
+                <input id="cvc-input" type="text" pattern="[0-9]{3}" name="cvc" placeholder="XXX" aria-labelledby="cvc" required>
+            </div>
+        </div>
+        <button id="submit-button" type="submit" value="Submit">Submit</button>
+    </form>
+    <!-- <button id="submit-button">Submit</button> -->
+    
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+form {
+    margin-top: 20px;
+    margin-left: 20%;
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 75px 175px 75px;
+    grid-template-rows: 28px 98px 28px 28px;
+}
+
+button {
+    grid-column: 2/3;
+    margin-left: 97.5%;
+    width: 70px;
+    margin-top: 10px;
+    height: 2em;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px rgb(130, 130, 130);
+}
+
+#credit-top {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 33% 33% 33%;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 3px 3px rgb(130, 130, 130);
+    border-radius: 7px;
+    padding: 10px;
+    padding-right: 0;
+}
+
+label {
+    width: 90%;
+    font-size: .75em;
+}
+
+input {
+    width: 90%;
+    height: 1.2em;
+}
+
+input::placeholder {
+    font-size: .7em;
+}
+
+#total-label {
+    margin-top: 10px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+#credit-icon {
+    text-align: right;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: 1.2em;
+}
+
+#card-number {
+    grid-column: 1/2;
+    grid-row: 2/3
+}
+
+#card-holder {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#expiration {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#expiration div {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    column-gap: 10px;
+    padding-right: 15px;
+}
+
+#expiration label {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#expiration-month {
+    width: 100%;
+    grid-column: 1/2;
+}
+
+#expiration-year {
+    width: 100%;
+    grid-column: 2/3;
+}
+
+
+#credit-bottom {
+    display: grid;
+    grid-column: 2/4;
+    grid-row: 2/5;
+    grid-template-columns: 77% 23%;
+    grid-template-rows: 6% 47% auto;
+    background-color: lightgray;
+    z-index: -1;
+    border-radius: 7px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 5px 3px 3px rgb(130, 130, 130);
+}
+
+#black-bar {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    background-color: black;
+    height: 25px;
+    width: 100%;
+}
+
+#cvc {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding-right: 10px;
+}

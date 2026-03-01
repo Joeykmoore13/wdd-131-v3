@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/solved_icon.ico">
+</head>
+
+<header>
+    <div id=logo_fill>
+        <a class=logoref href="index.html"><img id="logo" src="images/puzzlemasters_new_logo.png"
+                alt="puzzle masters logo"></a>
+    </div>
+    <nav>
+        <div>
+            <a href="index.html">Home</a>
+        </div>
+        <div>
+            <a href="notation_page.html">Notation</a>
+        </div>
+        <div class="current">
+            <a href="tips_page.html">Beginner tips/tricks</a>
+        </div>
+        <div>
+            <a href="intermediate_methods.html">Intermediate techniques (WIP)</a>
+        </div>
+        <div>
+            <a href="advanced_methods.html">Advanced techniques (WIP)</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <div class="grid_border">
+        <div class="border_one"></div>
+        <section>
+            <h2 class="title">Extra tips and tricks</h2>
+            <hr class="line first_line">
+            <p>This page is for once you have completed the main tutorial. It includes some tips on memorising
+                algorithms, some faster ways to do some of the steps, and some more advanced methods if you would like
+                to start getting faster. </p>
+            <p class="note">This page is a work in progress. More will be added as time goes on</p>
+
+            <!-- possibly add more efficent white cross tips -->
+            <h2>White Corners</h2>
+            <hr class="line">
+
+            <p>There is another more efficent way to insert some corners. It looks like the case below.</p>
+
+            <img src="images/alt_white_corner_setup.png" alt="white corner setup image">
+
+            <p>The other way of inserting the corner moved it out of the way first and then lifted the cross piece up.
+                This one lifts the corner with the cross piece. The moves look like this</p>
+            <img src="images/alt_corner_move_1.png" alt="alternate corner insert move 1 image">
+            <img src="images/alt_corner_move_2.png" alt="alternate corner insert move 2 image">
+            <img src="images/R_U'_R_solved.png" alt="corner solved image">
+            <p>As you can see it is a little harder to undestand what is going on but it uses less moves and doesn't
+                reqire any cube rotations or extra setup.</p>
+
+            <h2>Second layer</h2>
+            <p>This section will cover some trick on memorizing the algorithms for the second layer.</p>
+            <p>First we need to figure out which way the edge needs to go. For this example we need it to go into the
+                slot on the right.</p>
+            <img src="images/F2L_right.png" alt="F2L right case image">
+            <p>To start we are going to move the piece the opposite direction we need it to go. So for this example the
+                edge will be solved when it goes to the right so we are going to start by moving it to the left like
+                this:</p>
+            <img src="images/F2L_tricks_one.png" alt="F2l right case move one image">
+            <p>Then we are going to lift the corner up to the top layer like this</p>
+            <img src="images/F2L_tricks_two.png" alt="F2l right case move two image">
+            <p>Then we are going to bring our edge back to where it started like this</p>
+            <img src="images/F2L_tricks_three.png" alt="F2l right case move three image">
+            <p>Then we are going to fix our cross edge while 'sticking' the corner to the edge like this</p>
+            <img src="images/F2L_tricks_four.png" alt="F2l right case move four image">
+            <!-- This image is WAY to cropped. Make a new one -->
+            <p>Now we are going to move our paired pieces out of the way like this</p>
+            <img src="images/F2L_tricks_five.png" alt="F2l right case move five image">
+            <p>Then we'll lift our other cross edge, put the edge in, and then fix our cross edge like this</p>
+            <img src="images/F2L_tricks_six.png" alt="F2l right case move six image">
+            <img src="images/F2L_tricks_seven.png" alt="F2l right case move seven image">
+            <img src="images/F2L_tricks_eight.png" alt="F2l right case move eight image">
+
+            <h2>Cross edges</h2>
+            <p>This section will cover tips on how to memorize the algorithm to solve the cross edges</p>
+            <!-- Figure out what on earth is going on here -->
+            <p class="note">If you learn more advanced methods then you will use this algorithm for another purpose. It
+                is known as an anti-sune.</p>
+            <p>The most important pieces to watch during the algorithm are these.</p>
+            <img src="images/sune_tips_one.png" alt="Sune image">
+            <p>Watch where the pieces go during the algorithm</p>
+            <img src="images/sune_tips_move_one.png" alt="Sune image move one">
+            <img src="images/sune_tips_move_2.png" alt="Sune image move two">
+            <img src="images/sune_tips_move_3.png" alt="Sune image move three">
+            <img src="images/sune_tips_move_4.png" alt="Sune image move four">
+            <img src="images/sune_tips_move_5.png" alt="Sune image move five">
+            <img src="images/sune_tips_move_6.png" alt="Sune image move six">
+            <img src="images/sune_tips_move_7.png" alt="Sune image move seven">
+            <img src="images/permuted_yellow_cross.png" alt="Permuted yellow cross image">
+        </section>
+        <div class="border_two"></div>
+    </div>
+    <footer>
+        <p>Puzzle Masters &copy; 2024 - Joey Moore</p>
+        <p>Images sourced from <a href="https://rubikscu.be/" target="_blank">https://rubikscu.be/</a></p>
+    </footer>
+</body>
+
+</html>

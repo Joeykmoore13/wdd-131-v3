@@ -1,0 +1,51 @@
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+#card {
+    margin-left: 40%;
+    margin-top: 5%;
+    width: 300px;
+    background-color: rgb(66, 66, 66);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#name {
+    background-color: rgb(105, 131, 136);
+    margin-top: 0;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
+
+#stats {
+    padding-left: 10px;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding-bottom: 10px;
+}
+
+button {
+    width: 70px;
+    background-color: rgb(189, 198, 200);
+    border: none;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: rgb(234, 234, 234);
+}
+
+p,
+h1 {
+    color: white;
+}

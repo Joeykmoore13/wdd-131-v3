@@ -1,0 +1,416 @@
+:root {
+    /* Original color: #b00c00 */
+    --main-color-1: rgb(68, 67, 67);
+    /* --main-background:  */
+    --note-color: yellow;
+    --nav-current: #50aaff;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 25% auto;
+    margin: 0;
+}
+
+.logoref {
+    font-size: 0;
+}
+
+#logo_fill {
+    width: 100%;
+    background-color: var(--main-color-1);
+}
+
+#logo {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-color-1);
+    align-items: center;
+}
+
+nav div a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    height: 20px;
+}
+
+nav div{
+    padding: 30px;
+    height: auto;
+    border-radius: 7px;
+}
+
+nav div a:hover {
+    /* Make this so it highlights the entire box, not just the text */
+    background-color: var(--nav-current);
+    color: black;
+    opacity: 80%;
+    border-radius: 60px;
+}
+
+.current {
+    background-color: var(--nav-current);
+}
+
+body {
+    background-color: white;
+    margin: 0;
+}
+
+#sidebar {
+    position: fixed;
+    /* grid-column: 2/3; */
+    height: 65%;
+    width: 0;
+    z-index: 3;
+    top: 150px;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+#closebtn {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidebar_image {
+    margin-left: 33%;
+    width: 40%;
+    height: auto;
+    border: 3px solid black;
+}
+
+.sidebar_text {
+    font-size: 1em;
+    margin: 0;
+    margin-left: 35%;
+    margin-bottom: 15%;
+}
+
+#button_div {
+    z-index: 3;
+    width: 10%;
+}
+
+.openbtn {
+    font-size: 1em;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+#sidebar-nav {
+    text-align: left;
+    background-color: rgb(67, 164, 255);
+    margin: 10px;
+    margin-left: 6;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    max-width: 8.5%;
+    margin-top: 100px;
+}
+
+#sidebar-nav ul {
+    margin-left: 0;
+    padding: 0;
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+#sidebar-nav hr {
+    width: 80%;
+    margin: 0;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+#sidebar-nav ul li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#sidebar-nav ul li a {
+    text-decoration: none;
+    color: white;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#sidebar-nav ul li a:hover{
+    background-color: rgb(1, 1, 181);
+    border-radius: 5px;
+}
+
+.grid_border {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+}
+
+#content {
+    padding: 5%;
+    background-color: white;
+    grid-column: 2/3;
+}
+
+.border_one {
+    grid-column: 1/2;
+    background-color: var(--main-color-1);
+    height: 100%;
+    z-index: 1;
+    background-color: rgb(68, 67, 67);
+}
+
+.border_two {
+    grid-column: 3/4;
+    background-color: var(--main-color-1);
+    height: 100%;
+    z-index: 1;
+    background-color: rgb(68, 67, 67);
+
+}
+
+.line {
+    border-top: 3px solid;
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+.small_line {
+    border-top: 2px solid;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.first_line {
+    margin-bottom: 150px;
+}
+
+h2 {
+    margin-left: 10%;
+    margin-top: 20%;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.collapse-button-div {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    max-height: 150px;
+    margin: 0;
+}
+
+.collapse-button {
+    text-align: left;
+    margin-left: 60px;
+    font-size: 2em;
+    border: none;
+    background-color: white;
+}
+
+h3 {
+    margin-left: 10%;
+    margin-top: 20%;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.title {
+    margin-top: 100px;
+}
+
+p {
+    margin: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+.collapse-button-div p {
+    margin: 0;
+    text-align: right;
+    margin-right: 70px;
+}
+
+/* Move something around so this thing above doesn't need to exist */
+
+.opening_text {
+    font-size: 1.5em;
+}
+
+.alg {
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+.note {
+    background-color: var(--note-color);
+    width: fit-content;
+    padding: 1px;
+    border: 3px solid black;
+    /* fix this so it doesnt take up so much space */
+}
+
+.move_image {
+    height: 200px;
+    border: 3px solid black;
+}
+
+img:not(#logo):not(.sidebar_image):not(.move_image) {
+    /* margin-left: 15%; */
+    height: 150px;
+    width: 150px;
+    /* border: 3px solid black; */
+    margin-bottom: 20px;
+}
+
+.img-block {
+    overflow: hidden;
+}
+
+.img-block img {
+    float: right;
+    margin-left: 100px;
+    margin-right: 40px;
+    /* margin: 0 0 16px 24px; */
+}
+
+.notation_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+    margin-left: 10%;
+    padding: 0;
+    align-content: center;
+}
+
+.notation_image {
+    margin: 0;
+    width: 0;
+    margin-bottom: 70px;
+}
+
+.move {
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 33%;
+    font-size: 1.5em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-color-1);
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    color: white;
+}
+
+.notation-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.notation-relative {
+    position: absolute;
+    right: 0px;
+}
+
+.sidebar-nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-nav-relative {
+    position: absolute;
+    left: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .move_image {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: .45em;
+    }
+
+    p:not(.alg):not(.sidebar_text) {
+        font-size: 1.5em;
+    }
+
+    .alg {
+        font-size: 1.5em;
+        margin-left: 50px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    img:not(#logo):not(.sidebar_image):not(.move_image) {
+        height: 120px;
+        width: 120px;
+    }
+
+    .move_image {
+        height: 60px;
+        width: 60px;
+    }
+
+    .openbtn {
+        font-size: .5em;
+    }
+
+    #button_div {
+        z-index: 3;
+        right: 25px;
+        width: 10%;
+    }
+
+    footer p {
+        margin: 6%;
+    }
+}

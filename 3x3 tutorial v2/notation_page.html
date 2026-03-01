@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="styles/styles.css">
+   <link rel="icon" href="images/solved_icon.ico">
+</head>
+
+<header>
+    <div id=logo_fill>
+        <a class=logoref href="index.html"><img id="logo" src="images/puzzlemasters_new_logo.png"
+                alt="puzzle masters logo"></a>
+    </div>
+    <nav>
+        <div>
+            <a href="index.html">Home</a>
+        </div>
+        <div class="current">
+            <a href="notation_page.html">Notation</a>
+        </div>
+        <div>
+            <a href="tips_page.html">Beginner tips/tricks</a>
+        </div>
+        <div>
+            <a href="intermediate_methods.html">Intermediate techniques (WIP)</a>
+        </div>
+        <div>
+            <a href="advanced_methods.html">Advanced techniques (WIP)</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+   <div class="grid_border">
+      <div class="border_one"></div>
+      <section>
+         <h2 class="title">How to read Rubik's cube notation</h2>
+         <hr class="line first_line">
+         <p>The first thing you need to do is to pick a face to be your front and turn it so it is facing straight
+            towards you. For this page we are going to have the green side facing directly towards us. Then we need to
+            know what each side is marked as</p>
+         <img src="images/notation.png" alt="rubik's cube notation image">
+         <p>The image above marks what letter goes with what side. R stands for RIGHT and corresponds to the side to the
+            right of the one facing you. L stands for LEFT, F for FRONT, U for UP, D for DOWN, and B for BACK.</p>
+         <p>When we read a letter then we turn the corresponding side clockwise. For example if we see R then we would
+            turn the RIGHT face clockwise like this</p>
+         <img src="images/R.png" alt="rubik's cube move">
+         <p>If there is an apostrophe after the letter then we turn that side counter-clockwise. For example if we read
+            R' then we turn the cube like this</p>
+         <img src="images/R'.png" alt="rubik's cube move">
+         <p>If there is a 2 after the letter then we turn that side twice. It doesn't matter what direction. For example
+            if we read R2 then we turn the cube like this</p>
+         <img src="images/R2.png" alt="rubik's cube move">
+         <p>Heres a list of all of the most common turns. For this tutorial the most important ones to know are the R
+            face, F face and U face. The L and D faces are used but not as much.</p>
+         <!-- Put all of the images here -->
+         <div class="notation_grid">
+            <div class="notation_image">
+               <img src="images/R.png" alt="rubik's cube move" class="move_image">
+               <p class="move">R</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/R2.png" alt="rubik's cube move">
+               <p class="move">R2</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/R'.png" alt="rubik's cube move">
+               <p class="move">R'</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/F.png" alt="rubik's cube move">
+               <p class="move">F</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/F2.png" alt="rubik's cube move">
+               <p class="move">F2</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/F'.png" alt="rubik's cube move">
+               <p class="move">F'</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/U.png" alt="rubik's cube move">
+               <p class="move">U</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/U2.png" alt="rubik's cube move">
+               <p class="move">U2</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/U'.png" alt="rubik's cube move">
+               <p class="move">U'</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/L.png" alt="rubik's cube move">
+               <p class="move">L</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/L2.png" alt="rubik's cube move">
+               <p class="move">L2</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/L'.png" alt="rubik's cube move">
+               <p class="move">L'</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/D.png" alt="rubik's cube move">
+               <p class="move">D</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/D2.png" alt="rubik's cube move">
+               <p class="move">D2</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/D'.png" alt="rubik's cube move">
+               <p class="move">D'</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/B.png" alt="rubik's cube move">
+               <p class="move">B</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/B2.png" alt="rubik's cube move">
+               <p class="move">B2</p>
+            </div>
+            <div class="notation_image">
+               <img class="move_image" src="images/B'.png" alt="rubik's cube move">
+               <p class="move">B'</p>
+            </div>
+         </div>
+
+         <p class="note">Note: For more advanced methods there are more types of moves but for this tutorial they aren't
+            used. See the tips and tricks page for more advanced methods and notation</p>
+
+      </section>
+      <div class="border_two"></div>
+   </div>
+   <footer>
+      <p>Puzzle Masters &copy; 2024 - Joey Moore</p>
+      <p>Images sourced from <a href="https://rubikscu.be/" target="_blank">https://rubikscu.be/</a></p>
+   </footer>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+Sune:
+https://cube.rider.biz/visualcube.php?fmt=svg&size=220&fd=nunuuuuunnnrnnnnnnnnfnnnnnnnnnnnnnnnnnnnnnnnnnnbnnnnnn&view=plan&sch=yyyyyy
+
+Anti-Sune:
+https://cube.rider.biz/visualcube.php?fmt=svg&size=220&fd=nunuuununrnnnnnnnnfnnnnnnnnnnnnnnnnnlnnnnnnnnnnnnnnnnn&view=plan&sch=yyyyyy

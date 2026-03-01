@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/solved_icon.ico">
+</head>
+
+<body>
+    <header>
+        <div id = logo_fill>
+            <a class=logoref href="index.html"><img id="logo" src="images/Puzzle-Masters-logo.png" alt="puzzle masters logo"></a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="notation_page.html">Notation</a>
+            <a href="tips_page.html">Beginner tips/tricks</a>
+            <a class="current" href="intermediate_methods.html">Intermediate techniques (WIP)</a>
+            <a href="advanced_methods.html">Advanced techniques (WIP)</a>
+            <!-- Link to the images site -->
+            <!-- https://rubikscu.be/ -->
+        </nav>
+    </header>
+    <div class="grid_border">
+        <div class="border_one"></div>
+        <section>
+            <p class="note">This page is very much a work in progress. A lot of the info here is likely only partially
+                finished</p>
+            <h2 class="title">Intermediate techniques</h2>
+            <hr class="line first_line">
+            <p>This section is for once you have completed the beginners tutorial and want to start learning more
+                efficent and faster methods of solving the cube. Its recomended to memorize the whole beginners tutorial
+                before starting this section</p>
+            <h2>Step explanation</h2>
+            <hr class="line">
+            <p>The first thing we need to do is to understand what is different about the more advanced methods than the
+                beginners method. <br><br>The beginners method is the one taught in the main tutorial of this site.
+                Layer-by-layer is the intermediate version of the beginners method. It changes the order of a couple of
+                steps and uses some more efficient methods. Layer-by-layer is basically a simplified version of CFOP and
+                a great way to build up to CFOP. CFOP is one of the most advanced methods cubers use. CFOP stands for
+                Cross, F2L (Which stands for First 2 Layers), Orient Last Layer, and Permute Last Layer. Roux is also
+                another great advanced method that has its own pros and cons but won't be taught here. It has a more
+                intuitive aproach to solving the cube and doesn't use nearly as many algorithms as CFOP but some of the
+                techniques used are a little harder to pick up than in CFOP.<br><br>This page will focus mostly on
+                layer-by-layer and the advanced page will focus on full CFOP.</p>
+            <p>The steps for layer-by-layer are as follows. Solve the white cross, either solving white corners then
+                solving the 2nd layer OR doing F2L, solving the yellow face (known as orienting the yellow face) in 2
+                steps, then permuting the yellow layer.</p>
+
+            <h2>2-Look OLL</h2>
+            <hr class="line">
+            <p>This step solves a yellow face but it splits it into 2 seperate steps or "2 looks". First we are going to
+                solve the yellow cross and then the corners. The yellow cross in this step is solved very similar to the
+                beginners metehod but with 2 more algorithms to make it faster.</p>
+            <img src="image/yellow_cross_bar">
+            <p>For this case we use the exact same algorithm as used in the beginners method</p>
+            <p class="alg">F R U R’ U’ F’</p>
+            <img src="image/yellow_cross_dot">
+            <p>For this case we are going to use a very similar algorith except it is going to use wide moves</p>
+            <p class="note">Note: The lowercase letters are wide moves, not regular moves. See the advanced notation
+                section at the bottom of this page for how wide moves work</p>
+            <p class="alg">f R U R' U' f'</p>
+            <img src="image/yellow_cross_L">
+            <p>For this case there are some algorithms that can solve the cross in one go but they are kind of tricky to
+                do so the most efficent way to do this with 2 look is to just to the other 2 algorithms back to back. It
+                doesn't matter what order you do them in but just do one and then immediately do the other one. Try to
+                memorize doing this case as one algorithm instead of doing 2 seperate algorithms to make it faster.</p>
+            <p>Your cube should now look something like this</p>
+            <img src="NEED IMAGE HERE">
+            <!-- Create an image of OLL solved -->
+
+            <h2>2-Look Pll</h2>
+            <hr class="line">
+            <p>This step, like 2-look OLL, is split into solving the edges and corners seperate.</p>
+
+            <h3>Corners</h3>
+            <hr class="line">
+            <p>For this step there are 2 possible cases.</p>
+            <img src="NEED IMAGE HERE">
+            <!-- Create an image of adjacent corners PLL case -->
+            <p>The first case is the adjacent corners case and there are 2 ways of solving it. You choose which method
+                you prefer. We can recognize this case by looking for a set of "headlights" made by 2 corners like this:
+            </p>
+            <img src="NEED IMAGE HERE">
+            <!-- Create na image of adjacent corners with the headlights highlighted -->
+            <p>The first way of solving this case is to put the headlights on the LEFT side and to do this algorithm.
+            </p>
+            <p class="alg">(R U R' F')(R U R' U')(R' F R2 U' R')[U']</p>
+            <p class="note">Note: This algorithm is just a J-perm from the PLL step on the advanced page</p>
+            <p>The other way to solve this case is to put the headlights facing the BACK and to do this algorithm</p>
+            <p class="alg">(R' F R') B2 (R F' R') B2 R2</p>
+            <p class="note">Note: This algorithm is the Aa-Perm from the PLL step on the advanced page just rotated by
+                an x' move</p>
+            <img src="NEED IMAGE HERE">
+            <!-- Create an image of diag corners PLL case -->
+            <p>The second case we can get is the diagonal corners case. We can tell we have diagonal corners because we
+                cannot find any headlights. The best way to solve this is to do this algorithm. The angle we do this
+                algorithm from does not matter.</p>
+            <p class="alg">F (R U' R' U')( R U R' F')(R U R' U')(R' F R F')</p>
+            <p class="note">Note: This algorithm is the Y-perm from the PLL step on the advanced page</p>
+
+            <h3>Edges</h3>
+            <hr class="line">
+            <p>This step has 4 possible cases</p>
+            <img src="NEED IMAGE HERE">
+            <!-- Create an image of a Ua perm -->
+            <p class="alg">M2 U M U2 M' U M2</p>
+            <p class="note">Note: This is the Ua-perm from the PLL section on the advanced page. There are other
+                algorithm options there if this is one you don't like.</p>
+            <img src="NEED IMAGE HERE">
+            <!-- Create an image of a Ub perm -->
+            <p class="alg">M2 U' M U2 M' U' M2</p>
+            <p class="note">Note: This is the Ub-perm from the PLL section on the advanced page. There are other
+                algorithm options there if this is one you don't like.</p>
+            <img src="NEED IMAGE HERE">
+            <!-- Create an image of an H-perm -->
+            <p class="alg">M2 U M2 U2 M2 U M2</p>
+            <p class="note">Note: THis is the H-perm from the PLL section on the advanced page</p>
+            <img src="NEED IMAGE HERE">
+            <!-- Create an image of a Z-perm -->
+            <p class="alg">(M2 U M2 U)(M' U2)(M2 U2 M')[U2]</p>
+            <p class="note">Note: This is the Z-perm from the PLL section on the advanced page</p>
+
+
+            <h2>F2L</h2>
+            <hr class="line">
+
+            <h2>More efficent white cross</h2>
+            <hr class="line">
+
+            <h2>More advanced notation</h2>
+            <hr class="line">
+            <!-- Add a sidebar like on the first page but for advanced notation -->
+        </section>
+        <div class="border_two"></div>
+    </div>
+    <footer>
+        <p>Puzzle Masters &copy; 2024 - Joey Moore</p>
+        <p>Images sourced from <a href="https://rubikscu.be/" target="_blank">https://rubikscu.be/</a></p>
+    </footer>
+</body>
+
+</html>

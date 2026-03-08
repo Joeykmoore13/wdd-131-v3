@@ -1,4 +1,9 @@
 // Collapsable sections: 
+
+import { concatenate } from './modules/testing.js';
+
+concatenate("Hello", "World");
+
 let sectionButtons = {}
 
 document.getElementById("basics-button").addEventListener("click", toggleCollapse)

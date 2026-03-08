@@ -1,0 +1,117 @@
+:root {
+    /* Original color: #b00c00 */
+    --main-color-1: rgb(68, 67, 67);
+    /* --main-background:  */
+    --note-color: yellow;
+    --nav-current: #50aaff;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 25% auto;
+    margin: 0;
+}
+
+.logoref {
+    font-size: 0;
+}
+
+#logo_fill {
+    width: 100%;
+    background-color: var(--main-color-1);
+}
+
+#logo {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-color-1);
+    align-items: center;
+}
+
+nav div a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    height: 20px;
+}
+
+nav div{
+    padding: 30px;
+    height: auto;
+    border-radius: 7px;
+}
+
+nav div a:hover {
+    /* Make this so it highlights the entire box, not just the text */
+    background-color: var(--nav-current);
+    color: black;
+    opacity: 80%;
+    border-radius: 60px;
+}
+
+.current {
+    background-color: var(--nav-current);
+}
+
+.face {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+}
+
+#cube-container{
+    display: grid;
+    width: 350px;
+    height: 450px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    border: 3px solid lime;
+}
+
+
+#U {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: white;
+}
+
+#L {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: orange;
+}
+
+#F {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: rgb(48, 209, 48);
+}
+
+#R {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background-color: red;
+}
+
+#D {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-color: yellow;
+}
+
+#B {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    background-color: blue;
+}

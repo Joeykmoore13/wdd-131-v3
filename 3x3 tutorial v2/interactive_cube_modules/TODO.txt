@@ -1,0 +1,31 @@
+Features to add to the HTML:
+Set cube state:
+Reset cube
+Make moves box
+Load cube state
+Execute alg
+Scramble cube
+
+Solver tools:
+Doesn't work currently. Probably exclue from the web version for now
+
+Cube settings:
+Enable/disable pieces
+Color scheme
+
+Save cube state:
+
+Algs:
+Input algs:
+Load/Execute algs:
+- Make a preset alg list?
+
+
+
+
+Loading and saving algs
+
+
+Initial load TODO:
+Choose a 2x2 or 3x3 on load.
+- Could make this default to 3x3 and reload if they want a 2x2

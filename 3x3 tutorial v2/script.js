@@ -1,8 +1,8 @@
-// Collapsable sections: 
 
 import { concatenate } from './modules/testing.js';
 
 concatenate("Hello", "World");
+// Collapsable sections: 
 
 let sectionButtons = {}
 

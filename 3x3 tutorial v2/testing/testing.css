@@ -46,7 +46,7 @@ nav div a {
     height: 20px;
 }
 
-nav div{
+nav div {
     padding: 30px;
     height: auto;
     border-radius: 7px;
@@ -70,7 +70,7 @@ nav div a:hover {
     border: 2px solid black;
 }
 
-#cube-container{
+#cube-container {
     display: grid;
     width: 350px;
     height: 450px;
@@ -83,35 +83,113 @@ nav div a:hover {
 #U {
     grid-column: 2/3;
     grid-row: 1/2;
+}
+
+#U div {
     background-color: white;
 }
 
 #L {
     grid-column: 1/2;
     grid-row: 2/3;
-    background-color: orange;
+}
+
+#L div {
+    background-color: rgb(255, 166, 0);
 }
 
 #F {
     grid-column: 2/3;
     grid-row: 2/3;
+}
+
+#F div {
     background-color: rgb(48, 209, 48);
 }
 
 #R {
     grid-column: 3/4;
     grid-row: 2/3;
+}
+
+#R div {
     background-color: red;
 }
 
 #D {
     grid-column: 2/3;
     grid-row: 3/4;
+}
+
+#D div {
     background-color: yellow;
 }
 
 #B {
     grid-column: 2/3;
     grid-row: 4/5;
+}
+
+#B div {
     background-color: blue;
+}
+
+#U,
+#F,
+#L,
+#R,
+#B,
+#D {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 3px;
+    column-gap: 3px;
+    padding: 3px;
+    background-color: black;
+}
+
+.tl {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.tc {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.tr {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+.cl {
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.cc {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.cr {
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+.bl {
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.bc {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+.br {
+    grid-row: 3/4;
+    grid-column: 3/4;
 }

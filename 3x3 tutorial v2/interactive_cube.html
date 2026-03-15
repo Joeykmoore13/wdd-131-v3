@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Masters</title>
+    <link rel="stylesheet" href="styles/interactive_cube.css">
+    <link rel="icon" href="images/solved_icon.ico">
+    <script type='module' src="modules/interactive_cube.js"></script>
+</head>
+
+<header>
+    <div id=logo_fill>
+        <a class=logoref href="index.html"><img id="logo" src="images/puzzlemasters_new_logo.png"
+                alt="puzzle masters logo"></a>
+    </div>
+    <nav>
+        <div>
+            <a href="index.html">Home</a>
+        </div>
+        <div>
+            <a href="notation_page.html">Notation</a>
+        </div>
+        <div>
+            <a href="tips_page.html">Beginner tips/tricks</a>
+        </div>
+        <div>
+            <a href="intermediate_methods.html">Intermediate techniques (WIP)</a>
+        </div>
+        <div>
+            <a href="advanced_methods.html">Advanced techniques (WIP)</a>
+        </div>
+        <div class="current">
+            <a href="interactive_cube.html">Interactive cube</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <div id="cube-container">
+            <div id="B-face" class="face">
+                <div class="tl sticker"></div>
+                <div class="tc sticker"></div>
+                <div class="tr sticker"></div>
+                <div class="cl sticker"></div>
+                <div class="cc sticker"></div>
+                <div class="cr sticker"></div>
+                <div class="bl sticker"></div>
+                <div class="bc sticker"></div>
+                <div class="br sticker"></div>
+            </div>
+            <div id="L-face" class="face">
+                <div class="tl sticker"></div>
+                <div class="tc sticker"></div>
+                <div class="tr sticker"></div>
+                <div class="cl sticker"></div>
+                <div class="cc sticker"></div>
+                <div class="cr sticker"></div>
+                <div class="bl sticker"></div>
+                <div class="bc sticker"></div>
+                <div class="br sticker"></div>
+            </div>
+            <div id="U-face" class="face">
+                <div class="tl sticker"></div>
+                <div class="tc sticker"></div>
+                <div class="tr sticker"></div>
+                <div class="cl sticker"></div>
+                <div class="cc sticker"></div>
+                <div class="cr sticker"></div>
+                <div class="bl sticker"></div>
+                <div class="bc sticker"></div>
+                <div class="br sticker"></div>
+            </div>
+            <div id="R-face" class="face">
+                <div class="tl sticker"></div>
+                <div class="tc sticker"></div>
+                <div class="tr sticker"></div>
+                <div class="cl sticker"></div>
+                <div class="cc sticker"></div>
+                <div class="cr sticker"></div>
+                <div class="bl sticker"></div>
+                <div class="bc sticker"></div>
+                <div class="br sticker"></div>
+            </div>
+            <div id="F-face" class="face">
+                <div class="tl sticker"></div>
+                <div class="tc sticker"></div>
+                <div class="tr sticker"></div>
+                <div class="cl sticker"></div>
+                <div class="cc sticker"></div>
+                <div class="cr sticker"></div>
+                <div class="bl sticker"></div>
+                <div class="bc sticker"></div>
+                <div class="br sticker"></div>
+            </div>
+            <div id="D-face" class="face">
+                <div class="tl sticker"></div>
+                <div class="tc sticker"></div>
+                <div class="tr sticker"></div>
+                <div class="cl sticker"></div>
+                <div class="cc sticker"></div>
+                <div class="cr sticker"></div>
+                <div class="bl sticker"></div>
+                <div class="bc sticker"></div>
+                <div class="br sticker"></div>
+            </div>
+            
+        </div>
+
+        <div id="cube-actions">
+            <h1>Cube Actions:</h1>
+            <button id="reset-cube">Reset cube</button>
+            <button id="scramble-cube">Scramble cube</button>
+            <label for="alginput">Input alg:</label>
+            <input type="text" id="alginput" name="alginput"><br><br>
+
+            <h2>Cube Moves:</h2>
+            <div id="cube-moves">
+                <button id="R">R</button>
+                <button id="Rp">R'</button>
+                <button id="R2">R2</button>
+
+                <button id="F">F</button>
+                <button id="Fp">F'</button>
+                <button id="F2">F2</button>
+
+                <button id="U">U</button>
+                <button id="Up">U'</button>
+                <button id="U2">U2</button>
+
+                <button id="L">L</button>
+                <button id="Lp">L'</button>
+                <button id="L2">L2</button>
+
+                <button id="D">D</button>
+                <button id="Dp">D'</button>
+                <button id="D2">D2</button>
+
+                <button id="B">B</button>
+                <button id="Bp">B'</button>
+                <button id="B2">B2</button>
+            </div>
+        </div>
+
+        <div id="cube-settings">
+            <h1>Cube Settings:</h1>
+            <button id="enable-disable">Enable/disable pieces</button>
+        </div>
+        <!-- Elements to add:
+    Cube actions section:
+    Reset cube button
+    Scramble cube button
+    Buttons to make moves for each move (ex: R U F', etc)
+
+    Cube settings section:
+    Enable/disable piece Buttons
+    - Probably just have a button to toggle a disable/enable mode
+    - When this mode is active then when they click on a piece it grays it out and not much Elements
+    Color scheme
+    - Figure this out later. Just reserve space -->
+    </main>
+</body>
+
+</html>

@@ -55,6 +55,7 @@ hr {
     flex-direction: column;
     padding: 12px;
     padding-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .recipe img {

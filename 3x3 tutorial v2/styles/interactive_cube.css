@@ -78,6 +78,15 @@ main {
     border: 2px solid black;
 }
 
+#cube-actions{
+    margin: 50px;
+}
+
+#cube-settings {
+    margin: 50px;
+    margin-top: 0;
+}
+
 #cube-container {
     grid-row: 1/3;
     grid-column: 1/2;
@@ -86,76 +95,81 @@ main {
     height: 450px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    border: 3px solid lime;
+    margin: 100px;
 }
 
 #cube-moves {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 30%;
+    gap: 5px;
+}
+
+#cube-moves button {
+    width: 40px;
 }
 
 
-#U {
+#U-face {
     grid-column: 2/3;
-    grid-row: 1/2;
+    grid-row: 2/3;
 }
 
-#U div {
+#U-face div {
     background-color: white;
 }
 
-#L {
+#L-face {
     grid-column: 1/2;
     grid-row: 2/3;
 }
 
-#L div {
+#L-face div {
     background-color: rgb(255, 166, 0);
 }
 
-#F {
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-
-#F div {
-    background-color: rgb(48, 209, 48);
-}
-
-#R {
-    grid-column: 3/4;
-    grid-row: 2/3;
-}
-
-#R div {
-    background-color: red;
-}
-
-#D {
+#F-face {
     grid-column: 2/3;
     grid-row: 3/4;
 }
 
-#D div {
-    background-color: yellow;
+#F-face div {
+    background-color: rgb(48, 209, 48);
 }
 
-#B {
+#R-face {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#R-face div {
+    background-color: red;
+}
+
+#D-face {
     grid-column: 2/3;
     grid-row: 4/5;
 }
 
-#B div {
+#D-face div {
+    background-color: yellow;
+}
+
+#B-face {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#B-face div {
     background-color: blue;
 }
 
-#U,
-#F,
-#L,
-#R,
-#B,
-#D {
+#U-face,
+#F-face,
+#L-face,
+#R-face,
+#B-face,
+#D-face {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

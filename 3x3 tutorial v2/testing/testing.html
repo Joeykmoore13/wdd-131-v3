@@ -37,76 +37,130 @@
     </nav>
 </header>
 
-<body>
-    <div id="cube-container">
-        <div id="U" class="face">
-            <div class="tl"></div>
-            <div class="tc"></div>
-            <div class="tr"></div>
-            <div class="cl"></div>
-            <div class="cc"></div>
-            <div class="cr"></div>
-            <div class="bl"></div>
-            <div class="bc"></div>
-            <div class="br"></div>
-        </div>
-        <div id="L" class="face">
-            <div class="tl"></div>
-            <div class="tc"></div>
-            <div class="tr"></div>
-            <div class="cl"></div>
-            <div class="cc"></div>
-            <div class="cr"></div>
-            <div class="bl"></div>
-            <div class="bc"></div>
-            <div class="br"></div>
-        </div>
-        <div id="F" class="face">
-            <div class="tl"></div>
-            <div class="tc"></div>
-            <div class="tr"></div>
-            <div class="cl"></div>
-            <div class="cc"></div>
-            <div class="cr"></div>
-            <div class="bl"></div>
-            <div class="bc"></div>
-            <div class="br"></div>
-        </div>
-        <div id="R" class="face">
-            <div class="tl"></div>
-            <div class="tc"></div>
-            <div class="tr"></div>
-            <div class="cl"></div>
-            <div class="cc"></div>
-            <div class="cr"></div>
-            <div class="bl"></div>
-            <div class="bc"></div>
-            <div class="br"></div>
-        </div>
-        <div id="D" class="face">
-            <div class="tl"></div>
-            <div class="tc"></div>
-            <div class="tr"></div>
-            <div class="cl"></div>
-            <div class="cc"></div>
-            <div class="cr"></div>
-            <div class="bl"></div>
-            <div class="bc"></div>
-            <div class="br"></div>
-        </div>
-        <div id="B" class="face">
-            <div class="tl"></div>
-            <div class="tc"></div>
-            <div class="tr"></div>
-            <div class="cl"></div>
-            <div class="cc"></div>
-            <div class="cr"></div>
-            <div class="bl"></div>
-            <div class="bc"></div>
-            <div class="br"></div>
-        </div>
-    </div>
 
+<body>
+    <main>
+        <div id="cube-container">
+            <div id="U" class="face">
+                <div class="tl"></div>
+                <div class="tc"></div>
+                <div class="tr"></div>
+                <div class="cl"></div>
+                <div class="cc"></div>
+                <div class="cr"></div>
+                <div class="bl"></div>
+                <div class="bc"></div>
+                <div class="br"></div>
+            </div>
+            <div id="L" class="face">
+                <div class="tl"></div>
+                <div class="tc"></div>
+                <div class="tr"></div>
+                <div class="cl"></div>
+                <div class="cc"></div>
+                <div class="cr"></div>
+                <div class="bl"></div>
+                <div class="bc"></div>
+                <div class="br"></div>
+            </div>
+            <div id="F" class="face">
+                <div class="tl"></div>
+                <div class="tc"></div>
+                <div class="tr"></div>
+                <div class="cl"></div>
+                <div class="cc"></div>
+                <div class="cr"></div>
+                <div class="bl"></div>
+                <div class="bc"></div>
+                <div class="br"></div>
+            </div>
+            <div id="R" class="face">
+                <div class="tl"></div>
+                <div class="tc"></div>
+                <div class="tr"></div>
+                <div class="cl"></div>
+                <div class="cc"></div>
+                <div class="cr"></div>
+                <div class="bl"></div>
+                <div class="bc"></div>
+                <div class="br"></div>
+            </div>
+            <div id="D" class="face">
+                <div class="tl"></div>
+                <div class="tc"></div>
+                <div class="tr"></div>
+                <div class="cl"></div>
+                <div class="cc"></div>
+                <div class="cr"></div>
+                <div class="bl"></div>
+                <div class="bc"></div>
+                <div class="br"></div>
+            </div>
+            <div id="B" class="face">
+                <div class="tl"></div>
+                <div class="tc"></div>
+                <div class="tr"></div>
+                <div class="cl"></div>
+                <div class="cc"></div>
+                <div class="cr"></div>
+                <div class="bl"></div>
+                <div class="bc"></div>
+                <div class="br"></div>
+            </div>
+        </div>
+
+        <div id="cube-actions">
+            <h1>Cube Actions:</h1>
+            <button>Reset cube</button>
+            <button>Scramble cube</button>
+            <label for="alginput">Input alg:</label>
+            <input type="text" id="alginput" name="alginput"><br><br>
+
+            <h2>Cube Moves:</h2>
+            <div id="cube-moves">
+                <button>R</button>
+                <button>R'</button>
+                <button>R2</button>
+
+                <button>F</button>
+                <button>F'</button>
+                <button>F2</button>
+
+                <button>U</button>
+                <button>U'</button>
+                <button>U2</button>
+
+                <button>L</button>
+                <button>L'</button>
+                <button>L2</button>
+
+                <button>D</button>
+                <button>D'</button>
+                <button>D2</button>
+
+                <button>B</button>
+                <button>B'</button>
+                <button>B2</button>
+            </div>
+        </div>
+
+        <div id="cube-settings">
+            <h1>Cube Settings:</h1>
+            <button>Enable/disable pieces</button>
+        </div>
+        <!-- Elements to add:
+    Cube actions section:
+    Reset cube button
+    Scramble cube button
+    Buttons to make moves for each move (ex: R U F', etc)
+
+    Cube settings section:
+    Enable/disable piece Buttons
+    - Probably just have a button to toggle a disable/enable mode
+    - When this mode is active then when they click on a piece it grays it out and not much Elements
+    Color scheme
+    - Figure this out later. Just reserve space -->
+    </main>
 </body>
 
 </html>

@@ -14,6 +14,8 @@ Enable/disable pieces
 Color scheme
 
 Save cube state:
+Somehow
+
 
 Algs:
 Input algs:
@@ -25,7 +27,16 @@ Load/Execute algs:
 
 Loading and saving algs
 
+Elements to add:
+Cube actions section:
+Reset cube button
+Buttons to make moves for each move (ex: R U F', etc)
+Scramble cube button
 
-Initial load TODO:
-Choose a 2x2 or 3x3 on load.
-- Could make this default to 3x3 and reload if they want a 2x2
+Cube settings section:
+Enable/disable piece Buttons
+- Probably just have a button to toggle a disable/enable mode
+- When this mode is active then when they click on a piece it grays it out and not much Elements
+Color scheme
+- Figure this out later. Just reserve space
+

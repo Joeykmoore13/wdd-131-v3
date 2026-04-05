@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     /* Original color: #b00c00 */
     --main-color-1: rgb(68, 67, 67);
@@ -13,16 +18,10 @@ body {
 }
 
 header {
-    display: grid;
-    grid-template-columns: 25% auto;
-    margin: 0;
+    background-color: var(--main-color-1);
 }
 
-.logoref {
-    font-size: 0;
-}
-
-#logo_fill {
+#logo-fill {
     width: 100%;
     background-color: var(--main-color-1);
 }
@@ -32,24 +31,24 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 40px 40px;
+    text-align: center;
     background-color: var(--main-color-1);
-    align-items: center;
+}
+
+nav div {
+    padding: 7px;
+    border-radius: 7px;
+    align-self: center;
 }
 
 nav div a {
     color: white;
     text-decoration: none;
     text-align: center;
-    height: 20px;
-}
-
-nav div{
-    padding: 30px;
-    height: auto;
-    border-radius: 7px;
+    font-size: .5em;
 }
 
 nav div a:hover {
@@ -64,23 +63,36 @@ nav div a:hover {
     background-color: var(--nav-current);
 }
 
+.current a {
+    color: black;
+}
+
 body {
     background-color: white;
     margin: 0;
 }
 
-#sidebar {
+.sidebar {
     position: fixed;
-    /* grid-column: 2/3; */
-    height: 65%;
-    width: 0;
-    z-index: 3;
-    top: 150px;
     right: 0;
+    top: 50%;
+    height: 40%;
+    width: 0;
+    z-index: 5;
     background-color: white;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
+
+    display: grid;
+    grid-template-columns: 5% 2fr 5% 2fr 5% 2fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.open-sidebar {
+    width: 98%;
+    border: 4px solid black;
 }
 
 #closebtn {
@@ -92,8 +104,7 @@ body {
 }
 
 .sidebar_image {
-    margin-left: 33%;
-    width: 40%;
+    width: 60%;
     height: auto;
     border: 3px solid black;
 }
@@ -107,65 +118,97 @@ body {
 
 #button_div {
     z-index: 3;
-    width: 10%;
+    font-size: .7em;
 }
 
 .openbtn {
-    font-size: 1em;
+    font-size: 0.5em;
     cursor: pointer;
     background-color: black;
     color: white;
     padding: 10px 15px;
     border: none;
+    max-width: 100px;
 }
 
-#sidebar-nav {
+#notation-sidebar-button {
+    font-size: 0.5em;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    width: auto;
+}
+
+.sidebar-button-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-button-relative {
+    position: absolute;
+    left: 0px;
+}
+
+.sidebar-nav {
+    display: none;
     text-align: left;
     background-color: rgb(67, 164, 255);
     margin: 10px;
-    margin-left: 6;
+    margin-left: 6px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border-radius: 10px;
-    max-width: 8.5%;
+    max-width: 20%;
     margin-top: 100px;
+    border: 4px solid var(--main-color-1);
+    border-radius: 10px;
+    font-size: .7em;
 }
 
-#sidebar-nav ul {
+.open-nav {
+    display: block;
+}
+
+.sidebar-nav ul {
     margin-left: 0;
     padding: 0;
     padding-left: 15px;
     list-style-type: none;
 }
 
-#sidebar-nav hr {
-    width: 80%;
-    margin: 0;
-    margin-bottom: 8px;
-    text-align: left;
-}
-
-#sidebar-nav ul li {
+.sidebar-nav ul li {
     margin-bottom: 10px;
     margin-right: 10px;
+    padding-bottom: 10px;
+    /* I think this looks WAY better with white but lighthouse is marking me down for accessibility */
+    /* border-bottom: 2px solid white; */
+    border-bottom: 2px solid black;
 }
 
-#sidebar-nav ul li a {
+.sidebar-nav ul li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.sidebar-nav ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
+    /* I think this looks WAY better with white but lighthouse is marking me down for accessibility */
+    /* color: white; */
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-#sidebar-nav ul li a:hover{
+.sidebar-nav ul li a:hover {
     background-color: rgb(1, 1, 181);
     border-radius: 5px;
 }
 
-.grid_border {
+main {
     display: grid;
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: 10% 1fr 10%;
 }
 
 #content {
@@ -188,29 +231,30 @@ body {
     height: 100%;
     z-index: 1;
     background-color: rgb(68, 67, 67);
-
 }
 
 .line {
-    border-top: 3px solid;
+    border-top: 2px solid;
     width: 90%;
     margin-bottom: 50px;
+    margin-left: 7px;
 }
 
 .small_line {
+    width: 70%;
     border-top: 2px solid;
-    width: 80%;
     margin-bottom: 50px;
+    margin-left: 10px;
 }
 
-.first_line {
-    margin-bottom: 150px;
+:nth-child(1 of .line) {
+    margin-bottom: 70px;
 }
 
 h2 {
     margin-left: 10%;
     margin-top: 20%;
-    font-size: 50px;
+    font-size: 2em;
     margin-bottom: 30px;
 }
 
@@ -223,8 +267,8 @@ h2 {
 
 .collapse-button {
     text-align: left;
-    margin-left: 60px;
-    font-size: 2em;
+    margin-left: 15px;
+    font-size: 1.2em;
     border: none;
     background-color: white;
 }
@@ -261,9 +305,13 @@ p {
 }
 
 .alg {
-    font-size: 50px;
     font-weight: bold;
-    margin-left: 100px;
+    font-size: 1.5em;
+    margin-left: 50px;
+}
+
+p:not(.alg):not(.sidebar_text) {
+    font-size: 1em;
 }
 
 .note {
@@ -275,27 +323,29 @@ p {
 }
 
 .move_image {
-    height: 200px;
+    height: 60px;
+    width: 60px;
     border: 3px solid black;
 }
 
 img:not(#logo):not(.sidebar_image):not(.move_image) {
-    /* margin-left: 15%; */
-    height: 150px;
-    width: 150px;
-    /* border: 3px solid black; */
     margin-bottom: 20px;
+    height: 100px;
+    width: 100px;
 }
 
 .img-block {
-    overflow: hidden;
+    position: relative;
 }
 
 .img-block img {
+    overflow: hidden;
     float: right;
-    margin-left: 100px;
-    margin-right: 40px;
-    /* margin: 0 0 16px 24px; */
+    margin-left: 15px;
+}
+
+#final-tips-alg {
+    margin-left: 15px;
 }
 
 .notation_grid {
@@ -325,6 +375,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     background-color: var(--main-color-1);
+    font-size: .3em;
 }
 
 footer a {
@@ -362,19 +413,90 @@ footer p {
     display: none;
 }
 
+@media screen and (min-width: 800px) {
 
-@media screen and (max-width: 1000px) {
-    .move_image {
-        height: 150px;
-        width: 150px;
+    header {
+        display: grid;
+        grid-template-columns: 25% auto;
+        margin: 0;
     }
-}
 
-@media screen and (max-width: 800px) {
-    nav a {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: .45em;
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav div a {
+        height: 20px;
+        font-size: 1em;
+    }
+
+    nav div {
+        padding: 30px;
+        height: auto;
+        border-radius: 7px;
+    }
+
+    .sidebar-nav {
+        display: block;
+        text-align: left;
+        background-color: rgb(67, 164, 255);
+        margin: 10px;
+        margin-left: 6px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        max-width: 8.5%;
+        margin-top: 100px;
+        border-radius: 10px;
+        font-size: 1em;
+    }
+
+    .sidebar {
+        width: 10%;
+        font-size: 1em;
+        top: 150px;
+        height: 65%;
+        width: 0;
+    }
+
+    .sidebar_text {
+        font-size: 2em;
+    }
+
+    .open-sidebar {
+        width: 20%;
+        top: 100px;
+        height: 70%;
+        border: 4px solid black;
+    }
+
+    #notation-sidebar-button {
+        display: none;
+    }
+
+    .line {
+        border-top: 3px solid;
+        margin-left: 40px;
+    }
+
+    .collapse-button-div {
+        margin-left: 20px;
+    }
+
+
+    .small_line {
+        width: 80%;
+        margin-left: 70px;
+    }
+
+    :nth-child(1 of .line) {
+        margin-bottom: 150px;
+    }
+
+    .collapse-button {
+        font-size: 2em;
+        margin-left: 60px;
     }
 
     p:not(.alg):not(.sidebar_text) {
@@ -382,32 +504,42 @@ footer p {
     }
 
     .alg {
-        font-size: 1.5em;
-        margin-left: 50px;
+        font-size: 50px;
+        margin-left: 100px;
     }
 
     h2 {
-        font-size: 2em;
+        font-size: 50px;
+    }
+
+    .img-block {
+        display: block;
+        overflow: hidden;
+    }
+
+    .img-block img {
+        float: right;
+        margin-left: 100px;
+        margin-right: 40px;
+    }
+
+    #final-tips-alg {
+        margin-left: 100px;
+        margin-right: 100px;
     }
 
     img:not(#logo):not(.sidebar_image):not(.move_image) {
-        height: 120px;
-        width: 120px;
+        height: 150px;
+        width: 150px;
     }
 
     .move_image {
-        height: 60px;
-        width: 60px;
+        height: 200px;
+        width: 200px;
     }
 
-    .openbtn {
-        font-size: .5em;
-    }
-
-    #button_div {
-        z-index: 3;
-        right: 25px;
-        width: 10%;
+    footer {
+        font-size: 1em;
     }
 
     footer p {

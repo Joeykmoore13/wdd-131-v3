@@ -7,38 +7,41 @@
     <title>Puzzle Masters</title>
     <link rel="stylesheet" href="styles/interactive_cube.css">
     <link rel="icon" href="images/solved_icon.ico">
+    <meta name="description" content="A virtual interactive Rubik's cube">
+    <meta name="Author" content="Joey Moore">
     <script type='module' src="modules/interactive_cube.js"></script>
 </head>
 
-<header>
-    <div id=logo_fill>
-        <a class=logoref href="index.html"><img id="logo" src="images/puzzlemasters_new_logo.png"
-                alt="puzzle masters logo"></a>
-    </div>
-    <nav>
-        <div>
-            <a href="index.html">Home</a>
-        </div>
-        <div>
-            <a href="notation_page.html">Notation</a>
-        </div>
-        <div>
-            <a href="tips_page.html">Beginner tips/tricks</a>
-        </div>
-        <div>
-            <a href="intermediate_methods.html">Intermediate techniques (WIP)</a>
-        </div>
-        <div>
-            <a href="advanced_methods.html">Advanced techniques (WIP)</a>
-        </div>
-        <div class="current">
-            <a href="interactive_cube.html">Interactive cube</a>
-        </div>
-    </nav>
-</header>
-
 <body>
+    <header>
+        <div id=logo-fill>
+            <a class=logoref href="index.html"><img id="logo" src="images/puzzlemasters_new_logo.png"
+                    alt="puzzle masters logo"></a>
+        </div>
+        <nav>
+            <div>
+                <a href="index.html">Home</a>
+            </div>
+            <div>
+                <a href="notation_page.html">Notation</a>
+            </div>
+            <div>
+                <a href="tips_page.html">Beginner tips/tricks</a>
+            </div>
+            <!-- <div>
+            <a href="intermediate_methods.html">Intermediate techniques</a>
+        </div>
+        <div>
+            <a href="advanced_methods.html">Advanced techniques</a>
+        </div> -->
+            <div class="current">
+                <a href="interactive_cube.html">Interactive cube</a>
+            </div>
+        </nav>
+    </header>
+
     <main>
+        <div id="grid-border-one"></div>
         <div id="cube-container">
             <div id="B-face" class="face">
                 <div class="tl sticker"></div>
@@ -106,17 +109,41 @@
                 <div class="bc sticker"></div>
                 <div class="br sticker"></div>
             </div>
-            
         </div>
 
         <div id="cube-actions">
             <h1>Cube Actions:</h1>
             <button id="reset-cube">Reset cube</button>
             <button id="scramble-cube">Scramble cube</button>
+
             <label for="alginput">Input alg:</label>
-            <input type="text" id="alginput" name="alginput"><br><br>
+            <input type="text" id="alginput" name="alginput" pattern="^[RUFDLB'2\s]*$">
+            <button id="submit-alg">Run Alg</button>
+
+            <label for="algdropdown">Select alg:</label>
+            <select id="algdropdown">
+                <option>J-Perm</option>
+                <option>T-Perm</option>
+                <option>Y-Perm</option>
+                <option>F-Perm</option>
+                <option>L-Perm</option>
+                <option>Ra-Perm</option>
+                <option>Rb-Perm</option>
+                <option>Aa-Perm</option>
+                <option>Ab-Perm</option>
+                <option>H-Perm</option>
+                <option>Na-Perm</option>
+                <option>Nb-Perm</option>
+                <option>Ua-Perm</option>
+                <option>Ub-Perm</option>
+                <option>Z-Perm</option>
+                <option>V-Perm</option>
+                <option>E-Perm</option>
+            </select>
+            <button id="submit-dropdown">Run Alg</button>
 
             <h2>Cube Moves:</h2>
+            <button id="undo">Undo last</button>
             <div id="cube-moves">
                 <button id="R">R</button>
                 <button id="Rp">R'</button>
@@ -144,10 +171,15 @@
             </div>
         </div>
 
-        <div id="cube-settings">
+        <!-- TODO Eventually re-implement this -->
+        <!-- <div id="cube-settings">
             <h1>Cube Settings:</h1>
             <button id="enable-disable">Enable/disable pieces</button>
-        </div>
+            <button id="save">Save Cube State</button>
+            <button id="load">Load Cube State</button>
+        </div> -->
+
+
         <!-- Elements to add:
     Cube actions section:
     Reset cube button
@@ -160,7 +192,13 @@
     - When this mode is active then when they click on a piece it grays it out and not much Elements
     Color scheme
     - Figure this out later. Just reserve space -->
+        <div id="grid-border-two"></div>
     </main>
+
+    <footer>
+        <p>Puzzle Masters &copy; 2024 - Joey Moore</p>
+        <p>Images sourced from <a href="https://rubikscu.be/" target="_blank">https://rubikscu.be/</a></p>
+    </footer>
 </body>
 
 </html>

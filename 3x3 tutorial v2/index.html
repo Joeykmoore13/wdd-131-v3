@@ -9,7 +9,7 @@
     <link rel="icon" href="images/solved_icon.ico">
     <meta name="description" content="A tutorial on how to solve a 3x3 Rubik's cube intended for beginners">
     <meta name="Author" content="Joey Moore">
-    <script type='module' src="script.js"></script>
+    <script type='module' src="modules/script.js"></script>
     <!-- TODO -->
     <!-- Add a bunch of the above tags and links to the other pages -->
     <!-- Add the social media meta tags etc.. -->
@@ -49,99 +49,94 @@ Update the phrasing on a lot of the paragraphs. Dont use 'I', 'me', 'my', etc.
 Link to the images site
 https://rubikscu.be/ -->
 
-<header>
-    <div id=logo_fill>
-        <a class=logoref href="index.html"><img id="logo" src="images/puzzlemasters_new_logo.png"
-                alt="puzzle masters logo"></a>
-    </div>
-    <nav>
-        <div class="current">
-            <a href="index.html">Home</a>
-        </div>
-        <div>
-            <a href="notation_page.html">Notation</a>
-        </div>
-        <div>
-            <a href="tips_page.html">Beginner tips/tricks</a>
-        </div>
-        <div>
-            <a href="intermediate_methods.html">Intermediate techniques (WIP)</a>
-        </div>
-        <div>
-            <a href="advanced_methods.html">Advanced techniques (WIP)</a>
-        </div>
-        <div>
-            <a href="interactive_cube.html">Interactive cube</a>
-        </div>
-    </nav>
-</header>
-
 <body>
-    <div class="grid_border">
+    <header>
+        <div id=logo-fill>
+            <a class=logoref href="index.html"><img id="logo" src="images/puzzlemasters_new_logo.png"
+                    alt="puzzle masters logo"></a>
+        </div>
+        <nav>
+            <div class="current">
+                <a href="index.html">Home</a>
+            </div>
+            <div>
+                <a href="notation_page.html">Notation</a>
+            </div>
+            <div>
+                <a href="tips_page.html">Beginner tips/tricks</a>
+            </div>
+            <!-- <div>
+                <a href="intermediate_methods.html">Intermediate techniques</a>
+            </div>
+            <div>
+                <a href="advanced_methods.html">Advanced techniques</a>
+            </div> -->
+            <div>
+                <a href="interactive_cube.html">Interactive cube</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
         <div class="border_one">
-            <div id="sidebar-nav" class="sidebar-nav-relative">
+            <button id="notation-sidebar-button">&#9776; Steps</button>
+
+            <div class="sidebar-nav sidebar-nav-relative">
                 <ul>
-                    <li><a href="#basics-button">Intro: Basics</a></li>
-                    <hr>
+                    <!-- <li><a href="#basics-button">Intro: Basics</a></li> -->
                     <li><a href="#white-cross-button">Step 1: White Cross</a></li>
-                    <hr>
                     <li><a href="#white-corners-button">Step 2: White Corners</a></li>
-                    <hr>
                     <li><a href="#second-layer-button">Step 3: second layer</a></li>
-                    <hr>
                     <li><a href="#yellow-cross-button">Step 4: Yellow cross</a></li>
-                    <hr>
                     <li><a href="#permute-edges-button">Step 5: Yellow cross positions</a></li>
-                    <hr>
                     <li><a href="#permute-corners-button">Step 6: Yellow corner positions</a></li>
-                    <hr>
                     <li><a href="#orient-corners-button">Step 7: Twist yellow corners</a></li>
                 </ul>
             </div>
         </div>
 
-        <div id="button_div" class="notation-relative">
-            <button class="openbtn">&#9776; Notation</button>
-        </div>
-        <div id="sidebar" class="notation-fixed">
+        <button id="button_div" class="openbtn notation-relative">&#9776; Notation</button>
+
+        <div class="sidebar">
             <a href="javascript:void(0)" id="closebtn">&times;</a>
 
-            <img class="sidebar_image" src="images/R.png" alt="an r move image">
             <p class="sidebar_text">R</p>
-            <img class="sidebar_image" src="images/R2.png" alt="r2 move image">
+            <img class="sidebar_image" src="images/R.png" alt="an r move image">
             <p class="sidebar_text">R2</p>
-            <img class="sidebar_image" src="images/R'.png" alt="r' move image">
+            <img class="sidebar_image" src="images/R2.png" alt="r2 move image">
             <p class="sidebar_text">R'</p>
-            <img class="sidebar_image" src="images/F.png" alt="f move image">
+            <img class="sidebar_image" src="images/R'.png" alt="r' move image">
             <p class="sidebar_text">F</p>
-            <img class="sidebar_image" src="images/F2.png" alt="f2 move image">
+            <img class="sidebar_image" src="images/F.png" alt="f move image">
             <p class="sidebar_text">F2</p>
-            <img class="sidebar_image" src="images/F'.png" alt="f' move image">
+            <img class="sidebar_image" src="images/F2.png" alt="f2 move image">
             <p class="sidebar_text">F'</p>
-            <img class="sidebar_image" src="images/U.png" alt="u move image">
+            <img class="sidebar_image" src="images/F'.png" alt="f' move image">
             <p class="sidebar_text">U</p>
-            <img class="sidebar_image" src="images/U2.png" alt="u move image">
+            <img class="sidebar_image" src="images/U.png" alt="u move image">
             <p class="sidebar_text">U2</p>
-            <img class="sidebar_image" src="images/U'.png" alt="u' move image">
+            <img class="sidebar_image" src="images/U2.png" alt="u move image">
             <p class="sidebar_text">U'</p>
-            <img class="sidebar_image" src="images/L.png" alt="l move image">
+            <img class="sidebar_image" src="images/U'.png" alt="u' move image">
             <p class="sidebar_text">L</p>
-            <img class="sidebar_image" src="images/L2.png" alt="l2 move image">
+            <img class="sidebar_image" src="images/L.png" alt="l move image">
             <p class="sidebar_text">L2</p>
-            <img class="sidebar_image" src="images/L'.png" alt="l' move image">
+            <img class="sidebar_image" src="images/L2.png" alt="l2 move image">
             <p class="sidebar_text">L'</p>
-            <img class="sidebar_image" src="images/D.png" alt="d move image">
+            <img class="sidebar_image" src="images/L'.png" alt="l' move image">
             <p class="sidebar_text">D</p>
-            <img class="sidebar_image" src="images/D2.png" alt="d2 move image">
+            <img class="sidebar_image" src="images/D.png" alt="d move image">
             <p class="sidebar_text">D2</p>
-            <img class="sidebar_image" src="images/D'.png" alt="d' move image">
+            <img class="sidebar_image" src="images/D2.png" alt="d2 move image">
+
             <p class="sidebar_text">D'</p>
-            <img class="sidebar_image" src="images/B.png" alt="b move image">
+            <img class="sidebar_image" src="images/D'.png" alt="d' move image">
             <p class="sidebar_text">B</p>
-            <img class="sidebar_image" src="images/B2.png" alt="b2 move image">
+            <img class="sidebar_image" src="images/B.png" alt="b move image">
             <p class="sidebar_text">B2</p>
-            <img class="sidebar_image" src="images/B'.png" alt="b' move image">
+            <img class="sidebar_image" src="images/B2.png" alt="b2 move image">
             <p class="sidebar_text">B'</p>
+            <img class="sidebar_image" src="images/B'.png" alt="b' move image">
         </div>
 
         <!-- !!! -->
@@ -151,7 +146,7 @@ https://rubikscu.be/ -->
         <div id="content">
             <!-- Fix this so it is an h1 instead. (headings should cascade down from h1 to h2 to h3 and be manually resized) -->
             <h2 class="title">How to solve a Rubik's cube</h2>
-            <hr class="line first_line">
+            <hr class="line">
             <p class="opening_text">This guide is designed for anyone to be able to pick up a 3x3 Rubik's cube and solve
                 it in just 7 steps. You don't need to have any prior experience to use this guide.</p>
             <!-- Rewrite the opening steps to not use notation. Only start using notation when doing the yellow cross -->
@@ -160,7 +155,7 @@ https://rubikscu.be/ -->
             <!-- <p class ="opening_text">Before we start we need to understand some terms. There are 3 types of pieces on a Rubik's cube. Centers, edges, and corners. In the image below a center is circled in blue, and edge in red, and a corner in orange.</p -->
             <!-- Make an image that fills the requirements for the above paragraph -->
 
-            <div id="basics-button" class="collapse-button-div">
+            <!-- <div id="basics-button" class="collapse-button-div">
                 <button class="collapse-button" type="button">Intro: Basics</button>
                 <p class="button-icon">+</p>
             </div>
@@ -174,15 +169,15 @@ https://rubikscu.be/ -->
                     <li>How to hold the cube</li>
                     <li>What solving a cube is NOT (ex: doing math calculations)</li>
                     <li>Grayed out pieces in the example images</li>
-                    <!-- This /\ could be moved to the top of the page for the intro -->
-                    <li>Terminology: </li>
+                    This /\ could be moved to the top of the page for the intro -->
+            <!-- <li>Terminology: </li>
                     <ul>
                         <li>Rotate vs turn vs twist</li>
                         <li>Face and side</li>
                         <li>Sticker</li>
                     </ul>
                 </ul>
-            </section>
+            </section> -->
 
             <div id="white-cross-button" class="collapse-button-div">
                 <button class="collapse-button" type="button">Step 1: White cross</button>
@@ -190,15 +185,14 @@ https://rubikscu.be/ -->
             </div>
             <hr class="line">
             <section id="white-cross">
-                <!-- Change the class name here. Of course it's a line. Its an HR -->
 
                 <div class="img-block">
                     <p>The first step in this guide is to solve a white cross. You can technically start with any color
                         you want but this guide will start with white as it is the typical starting color.
                     </p>
-                    <img>
+                    <img src="images/solved_cross.png" alt="solved cross image">
                     <p>This is what our goal is for this section: </p>
-                    <!-- Add this image here -->
+
                 </div>
                 <p>For this entire guide we are going to be holding the white side facing down. (Meaning, if we put the
                     cube
@@ -541,6 +535,8 @@ https://rubikscu.be/ -->
                     <p> We are first going to turn the top layer so the side color matches the center below it like
                         this: </p>
                     <!-- Figure out how to fix the spacing on this image and any others like it: -->
+                </div>
+                <div class="img-block">
                     <img src="images/F2L_right_1_marked.png" alt="f2l right case image 1 alt marked">
                 </div>
 
@@ -575,6 +571,8 @@ https://rubikscu.be/ -->
                 <div class="img-block">
                     <img src="images/F2L_right_4.png" alt="f2l right case image 4">
                     <p>Then we are going to put the corner back down.</p>
+                </div>
+                <div class="img-block">
                     <img src="images/F2L_right_5_marked.png" alt="f2l right case image 5 alt marked">
                 </div>
 
@@ -582,8 +580,10 @@ https://rubikscu.be/ -->
                     the algorithm correctly.</p>
                 <div class="img-block">
                     <img src="images/F2L_right_5.png" alt="f2l right case image 5">
-                    <img src="images/F2L_right_6_marked.png" alt="f2l right case image 6 alt marked">
                     <p>Next we are going to put this pair of pieces down into the "slot" it belongs in like this:</p>
+                </div>
+                <div class="img-block">
+                    <img src="images/F2L_right_6_marked.png" alt="f2l right case image 6 alt marked">
                 </div>
 
                 <div class="img-block">
@@ -675,7 +675,7 @@ https://rubikscu.be/ -->
             <hr class="line">
             <section id="yellow-cross">
                 <div class="img-block">
-                    <img>
+                    <img src="images/solved_yellow_cross.png" alt="solved yellow crosss image">
                     <p>For this step we are going to make a cross out of the yellow pieces on top while keeping the
                         rest
                         of our cube solved.</p>
@@ -689,9 +689,7 @@ https://rubikscu.be/ -->
                 </div>
 
                 <p>To solve the cross with this case make sure the bar is set horizontally like in the picture
-                    above. If
-                    the
-                    bar is
+                    above. If the bar is
                     turned vertically then the algorithm won't work.</p>
 
                 <p class="alg">F R U R’ U’ F’</p>
@@ -862,13 +860,14 @@ https://rubikscu.be/ -->
             </section>
         </div>
         <div class="border_two"></div>
-    </div>
-</body>
+    </main>
 
-<footer>
-    <p>Puzzle Masters &copy; 2024 - Joey Moore</p>
-    <p>Images sourced from <a href="https://rubikscu.be/" target="_blank">https://rubikscu.be/</a></p>
-    <a href="testing/testing.html">Testing page</a>
-</footer>
+
+    <footer>
+        <p>Puzzle Masters &copy; 2024 - Joey Moore</p>
+        <p>Images sourced from <a href="https://rubikscu.be/" target="_blank">https://rubikscu.be/</a></p>
+    </footer>
+
+</body>
 
 </html>

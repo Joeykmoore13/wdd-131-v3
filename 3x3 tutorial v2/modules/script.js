@@ -1,14 +1,9 @@
-
-import { concatenate } from './modules/testing.js';
-
-concatenate("Hello", "World");
 // Collapsable sections: 
-
 let sectionButtons = {}
 
-document.getElementById("basics-button").addEventListener("click", toggleCollapse)
-sectionButtons["basics-button"] = document.getElementById("basics");
-sectionButtons["basics-button"].classList.toggle('hidden');
+// document.getElementById("basics-button").addEventListener("click", toggleCollapse)
+// sectionButtons["basics-button"] = document.getElementById("basics");
+// sectionButtons["basics-button"].classList.toggle('hidden');
 
 document.getElementById("white-cross-button").addEventListener("click", toggleCollapse)
 sectionButtons["white-cross-button"] = document.getElementById("white-cross");
@@ -41,12 +36,10 @@ sectionButtons["orient-corners-button"].classList.toggle('hidden');
 function toggleCollapse() {
     sectionButtons[this.id].classList.toggle('hidden');
 
-    if (document.querySelector(`#${this.id} p`).textContent == '+') 
-    {
+    if (document.querySelector(`#${this.id} p`).textContent == '+') {
         document.querySelector(`#${this.id} p`).textContent = '-';
     }
-    else 
-    {
+    else {
         document.querySelector(`#${this.id} p`).textContent = '+';
     }
 }
@@ -57,6 +50,9 @@ let notationButton = document.getElementById("button_div");
 let notationOpen = false
 notationButton.addEventListener('click', toggleNotation);
 document.getElementById("closebtn").addEventListener('click', closeNotation);
+
+document.getElementById("notation-sidebar-button").addEventListener('click', toggleSidebarNav);
+let navOpen = false
 
 // onclick="closeNav()"
 // Notation reminder button
@@ -74,13 +70,34 @@ function toggleNotation() {
 }
 
 function openNotation() {
-    document.getElementById("sidebar").style.width = "15%";
-    document.getElementById("sidebar").style.border = "7px solid black";
+    document.querySelector(".sidebar").classList.add("open-sidebar");
 }
 
 function closeNotation() {
-    document.getElementById("sidebar").style.width = "0";
-    document.getElementById("sidebar").style.border = "none"
+    document.querySelector(".sidebar").classList.remove("open-sidebar");
+}
+
+function toggleSidebarNav() {
+    console.log("Called toggleSidebarNav");
+    console.log(navOpen);
+    if (navOpen) {
+        closeSidebarNav();
+        navOpen = false;
+    }
+    else {
+        openSidebarNav();
+        navOpen = true;
+    }
+}
+
+function openSidebarNav() {
+    console.log("Ran openSidebarNav");
+    document.querySelector(".sidebar-nav").classList.add("open-nav");
+}
+
+function closeSidebarNav() {
+    console.log("Ran closeSidebarNav");
+    document.querySelector(".sidebar-nav").classList.remove("open-nav");
 }
 
 window.onscroll = function () { sidebarScroll() }
@@ -89,16 +106,23 @@ function sidebarScroll() {
     var logoheight = document.querySelector("#logo");
 
     let notation = document.getElementById("button_div");
-    let nav = document.getElementById("sidebar-nav");
+    let nav = document.querySelector(".sidebar-nav");
+    let side = document.getElementById("notation-sidebar-button");
 
     if (document.documentElement.scrollTop > logoheight.clientHeight) {
         if (notation.classList.contains("notation-relative")) {
             notation.classList.remove("notation-relative");
             notation.classList.add("notation-fixed");
+
         }
         if (nav.classList.contains("sidebar-nav-relative")) {
             nav.classList.remove("sidebar-nav-relative");
             nav.classList.add("sidebar-nav-fixed");
+
+            side.classList.remove("sidebar-button-relative");
+            side.classList.add("sidebar-button-fixed");
+
+
         }
     }
     else {
@@ -109,6 +133,9 @@ function sidebarScroll() {
         if (nav.classList.contains("sidebar-nav-fixed")) {
             nav.classList.remove("sidebar-nav-fixed");
             nav.classList.add("sidebar-nav-relative");
+
+            side.classList.remove("sidebar-button-fixed");
+            side.classList.add("sidebar-button-relative");
         }
     }
 }
